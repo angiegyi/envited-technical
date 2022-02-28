@@ -15,10 +15,10 @@ export enum Color {
 
 let theme = createTheme({
 	typography: {
-		fontFamily: "Helvetica Neue",
+		fontFamily: "Open Sans",
 		h1: {
 			fontWeight: "800",
-			fontSize: "80px",
+			fontSize: "70pxx",
 		},
 		body1: {
 			fontWeight: "bold",

@@ -1,5 +1,4 @@
 import React from "react";
-import { Color } from "../Atomic/Colors";
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import background from "../Assets/envited_background.png";
@@ -65,19 +64,29 @@ const LandingPage = () => {
 				<div style={{ alignSelf: "flex-start" }}>
 					<img
 						src={navbar}
-						style={{ width: "100%", marginBottom: "2em" }}
+						style={{ width: "100%", marginTop: "2em", marginBottom: "2em" }}
+						alt="nav bar"
 					></img>
 				</div>
 
 				<Typography
 					variant="h1"
-					sx={{ marginBottom: ".5em", color: "#FFFFFF", maxWidth: "70%" }}
+					sx={{
+						marginBottom: ".5em",
+						color: "#FFFFFF",
+						maxWidth: "70%",
+					}}
 				>
 					Facebook events without Facebook.
 				</Typography>
 				<Typography
 					variant="body1"
-					sx={{ marginBottom: "2em", color: "#FFFFFF", maxWidth: "70%" }}
+					sx={{
+						marginBottom: "2em",
+						color: "#FFFFFF",
+						maxWidth: "70%",
+						fontWeight: "400",
+					}}
 				>
 					Easily host and share events with your friends across any social
 					media.
@@ -106,6 +115,7 @@ const LandingPage = () => {
 					<img
 						src={product_image_left}
 						style={{ width: "10em", marginLeft: "3em" }}
+						alt="new event"
 					></img>
 					<img
 						src={product_image_center}
@@ -115,10 +125,12 @@ const LandingPage = () => {
 							margin: "0 -100px",
 							alignSelf: "center",
 						}}
+						alt="viewevent"
 					></img>
 					<img
 						src={product_image_right}
 						style={{ width: "10em", marginLeft: "30px", marginRight: "1em" }}
+						alt="viewevent"
 					></img>
 				</div>
 			</div>

@@ -4,10 +4,8 @@ import { useLocation } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Button from "../Atomic/Button";
 import CoverPhoto from "../Assets/CoverPhoto.png";
-import going from "../Assets/going.png";
-import maybe from "../Assets/maybe.png";
-import not_going from "../Assets/not_going.png";
 import EmojiBox from "./EmojiBox";
+import RespondButtons from "./RespondButtons";
 
 const useStyles = makeStyles({
 	bg: {
@@ -38,7 +36,6 @@ const useStyles = makeStyles({
 	eventMenu: {
 		display: "flex",
 		flexDirection: "row",
-		justifyContent: "space-between",
 		alignSelf: "center",
 	},
 	inviteBtn: {
@@ -65,7 +62,7 @@ const ViewEvent = () => {
 		<>
 			<div className={classes.bg}>
 				<div className={classes.coverPhoto}></div>
-				<div style={{ display: "flex" }}>
+				<div style={{ display: "flex", marginLeft: "2em" }}>
 					<EmojiBox emoji="🎉" emojiType="h1">
 						<div>
 							<Typography variant="h2" className={classes.purple}>
@@ -78,30 +75,9 @@ const ViewEvent = () => {
 					</EmojiBox>
 				</div>
 
-				<div
-					style={{
-						height: "13vh",
-						alignSelf: "center",
-					}}
-				>
-					<img
-						style={{ height: "6em", width: "6em" }}
-						src={going}
-						alt="going"
-					></img>
-					<img
-						style={{ height: "6em", width: "6em" }}
-						src={maybe}
-						alt="maybe"
-					></img>
-					<img
-						style={{ height: "6em", width: "6em" }}
-						src={not_going}
-						alt="not going"
-					></img>
-				</div>
+				<RespondButtons />
 
-				<div className={classes.eventMenu}>
+				<div className={classes.eventMenu} style={{ marginRight: "2em" }}>
 					<Button width="60vw" margin="0 10px">
 						<Typography variant="h6">
 							<b>✉️ Invite a friend</b>
@@ -142,7 +118,7 @@ const ViewEvent = () => {
 
 				<div
 					className={classes.eventMenu}
-					style={{ margin: "1em 3em 1em 3em" }}
+					style={{ margin: "2em 4em 1em 3em" }}
 				>
 					<Button
 						color="rgba(114, 77, 249, 0.3)"
